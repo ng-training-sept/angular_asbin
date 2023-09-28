@@ -1,29 +1,34 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from './components/card/card.component';
-import { NewcardComponent } from './components/newcard/newcard.component';
+// import { NewcardComponent } from './components/newcard/newcard.component';
 import { HeaderComponent } from './components/header/header.component';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatToolbarHarness} from '@angular/material/toolbar/testing';
+import { RouterOutlet } from '@angular/router';
+import { SportsComponent } from './forms/sports/sports.component';
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, CardComponent,NewcardComponent,HeaderComponent,MatToolbarModule,],
+  imports: [CommonModule, 
+     HeaderComponent,RouterOutlet,CardComponent,SportsComponent,AppComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-   title = 'ng';
+  //  title = 'ng';
 
-  cardsTitle: string[] = ['Maia', 'Dylan', 'Minoru', 'Amarachi', 'Ceallagh'];
-  fromParent = 'Hello from you parent,  son.';
-  parentOutputMessage:string | undefined;
+  // cardsTitle: string[] = ['Maia', 'Dylan', 'Minoru', 'Amarachi', 'Ceallagh'];
+  // fromParent = 'Hello from you parent,  son.';
+  // parentOutputMessage:string | undefined;
 
-  handleCustomEvent(message:string){
-    this.parentOutputMessage=message;
-  }
+  // handleCustomEvent(message:string){
+  //   this.parentOutputMessage=message;
+  // }
 
 
     cards:{title:string; content:string}[] =[
@@ -34,9 +39,9 @@ export class AppComponent {
     ];
     
 
-    deleteCard(index: number){
-      this.cards.splice(index,1);
-    }
+  //   deleteCard(index: number){
+  //     this.cards.splice(index,1);
+  //   }
   }
 
   // addCard(title: string) {

@@ -1,37 +1,16 @@
-<!-- <div><button [disabled]="isButtonDisabled" (click)="toggleButton()"> button </button></div>
-<div><button [disabled]="!isButtonDisabled"(click)="toggleButton()">toggle button</button></div>
-<mat-card>
+<div class="card-container">
+  <mat-card class="card" *ngFor="let card of cards">
     <mat-card-header>
-      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-title>{{ card.name }}</mat-card-title>
+      <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
     </mat-card-header>
+    <img mat-card-image [src]="card.imageUrl" alt="card">
     <mat-card-content>
-      <p  [style]="style">Hello {{firstname}}</p>
-      <p  [style]="style">Phone number is :{{number}}</p>
-    
-        <input matInput [(ngModel)]="titles">
-        <h2>{{titles}}</h2>
     </mat-card-content>
-  </mat-card>
-
-  
-  <h1 [ngClass]="case ? 'special' : ''">I am {{'running'}}</h1>
-
-  <mat-card>
+    <mat-card-actions>
       <mat-card-actions>
-        <button mat-button [disabled]="isLikeDisabled" (click)="onLike()">LIKE</button>
-        <button mat-button [disabled]="isShareDisabled">SHARE</button>
-        <button mat-button (click)="incrementLikes()"> Count Like</button>
-        <mat-card-subtitle *ngIf="likeCount">{{likeCount}} Likes</mat-card-subtitle>
+        <button mat-button color="primary" (click)="goToItemDetails(card)">Details</button>
       </mat-card-actions>
-    </mat-card>
-
-    <div class="card-container">
-        <mat-card class="card" *ngFor="let name of names">
-          <mat-card-header>
-            <mat-card-title>{{name}}</mat-card-title>  
-          </mat-card-header>
-        </mat-card>
-      </div>
- -->
-
-     
+    </mat-card-actions>
+  </mat-card>
+</div>

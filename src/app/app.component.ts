@@ -20,6 +20,9 @@ import { SportsComponent } from './forms/sports/sports.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+    title(title: any) {
+      throw new Error('Method not implemented.');
+    }
   //  title = 'ng';
 
   // cardsTitle: string[] = ['Maia', 'Dylan', 'Minoru', 'Amarachi', 'Ceallagh'];

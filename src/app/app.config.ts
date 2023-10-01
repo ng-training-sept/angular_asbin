@@ -1,4 +1,4 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig,NgModule } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
 import { Routes} from '@angular/router';
@@ -6,7 +6,9 @@ import { SportsComponent } from './forms/sports/sports.component';
 import { GroceryComponent } from './forms/grocery/grocery.component';
 import { CardItemComponent } from './components/card/card-item/card-item.component';
 import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.component';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { authGuard } from './auth/auth.constants';
+import { SportsStore } from './forms/sports/sports.store';
 
 
 

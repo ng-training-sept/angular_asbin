@@ -30,7 +30,6 @@ export class CardComponent {
     const dialogRef = this.dialog.open(ItemSaveUpdateComponent, {
       data // initial data to dialog (remember dialogData in ItemSaveUpdateComponent)
     });
-    
     dialogRef.afterClosed().subscribe(result => {
       if (result?.data) {
         console.log(result.data);

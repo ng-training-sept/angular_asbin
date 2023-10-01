@@ -3,10 +3,11 @@
     <button mat-button routerLink="/grocery">Grocery</button>
     <button mat-button routerLink="/sports">Sports</button>
     <button mat-button routerLink="/home">Home</button>
+    <button mat-raised-button (click)="addNew()">Add New</button>
     <!-- <span class="spacer"></span> -->
     <button (click)="login()" mat-icon-button aria-label="login">
       <mat-icon>login</mat-icon>
     </button>
-    <button (click)="implementData()">dataService</button>
-    <h2>{{data}}</h2>
+    <!-- <button (click)="implementData()">dataService</button>
+    <h2>{{data}}</h2> -->
 </mat-toolbar>

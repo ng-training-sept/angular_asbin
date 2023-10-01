@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from 'src/app/components/card/card.model';
 import { CardComponent } from 'src/app/components/card/card.component';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environment';
 
 @Component({
   selector: 'app-grocery',
@@ -13,6 +15,14 @@ import { CardComponent } from 'src/app/components/card/card.component';
 export class GroceryComponent implements OnInit {
 
   groceryCards: Card[] = [];
+  // private readonly http = inject(HttpClient);
+
+  // ngOnInit(): void {
+  //   this.http
+  //     .get<Card[]>(`${environment.baseUrl}/grocery`)
+  //     .subscribe(grocery => this.groceryCards = grocery);
+
+
 
   ngOnInit(): void {
       this.groceryCards = [
